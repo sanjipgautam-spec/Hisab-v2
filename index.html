@@ -528,7 +528,7 @@ function saveToCache() {
 // ---------- Firebase / sync ----------
 function initFirebase() {
   firebase.initializeApp(firebaseConfig);
-  db = firebase.firestore();
+  db = firebase.firestore();db.settings({ experimentalForceLongPolling: true, merge: true });
   auth = firebase.auth();
   docRef = db.collection(DOC_PATH.collection).doc(DOC_PATH.doc);
 
