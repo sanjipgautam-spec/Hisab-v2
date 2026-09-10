@@ -528,7 +528,7 @@ function saveToCache() {
 // ---------- Firebase / sync ----------
 function initFirebase() {
   firebase.initializeApp(firebaseConfig);
-  db = firebase.app().firestore('gautam');db.settings({ experimentalForceLongPolling: true, merge: true });
+  db = firebase.app().firestore('gautam');
   auth = firebase.auth();
   docRef = db.collection(DOC_PATH.collection).doc(DOC_PATH.doc);
 
